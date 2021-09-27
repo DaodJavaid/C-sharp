@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace My_First_Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double[] price = new double[6];
+
+            for(int i=0; i<price.Length; i++)
+            {
+                Console.Write("Enter Price: ");
+                price[i] = Convert.ToDouble(Console.ReadLine());
+            }
+
+            Console.Clear();
+            int n = 1;
+
+            Console.WriteLine("Output\n");
+
+            for (int j=0; j<price.Length; j++)
+            {   
+                Console.WriteLine($"Price of Product{n++}: {price[j]} ");
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
